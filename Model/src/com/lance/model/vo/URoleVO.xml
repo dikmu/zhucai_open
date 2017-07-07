@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="URoleVO"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="JDBC"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  RowClass="com.lance.model.vo.URoleVORowImpl"
+  ComponentClass="com.lance.model.vo.URoleVOImpl"
+  FetchMode="FETCH_AS_NEEDED"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <EntityUsage
+    Name="URoleEO"
+    Entity="com.lance.model.eo.URoleEO"/>
+  <ViewAttribute
+    Name="Nid"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Nid"
+    EntityUsage="URoleEO"
+    AliasName="NID"/>
+  <ViewAttribute
+    Name="Name"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="URoleEO"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="CnName"
+    PrecisionRule="true"
+    EntityAttrName="CnName"
+    EntityUsage="URoleEO"
+    AliasName="CN_NAME"/>
+  <ViewAttribute
+    Name="PriviledgeDesc"
+    PrecisionRule="true"
+    EntityAttrName="PriviledgeDesc"
+    EntityUsage="URoleEO"
+    AliasName="PRIVILEDGE_DESC"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="URoleEO"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="CreatedOn"
+    PrecisionRule="true"
+    EntityAttrName="CreatedOn"
+    EntityUsage="URoleEO"
+    AliasName="CREATED_ON"/>
+  <ViewAttribute
+    Name="UpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedBy"
+    EntityUsage="URoleEO"
+    AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="UpdatedOn"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedOn"
+    EntityUsage="URoleEO"
+    AliasName="UPDATED_ON"/>
+  <ViewAttribute
+    Name="Version"
+    PrecisionRule="true"
+    EntityAttrName="Version"
+    EntityUsage="URoleEO"
+    AliasName="VERSION"/>
+</ViewObject>

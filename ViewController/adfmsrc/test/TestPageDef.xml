@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="TestPageDef" Package="test">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="UUser1" RangeSize="25" DataControl="Lance1AMDataControl" id="UUser1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="UUser1Iterator" id="UUser1">
+      <nodeDefinition DefName="com.lance.model.vo.UUserVO" Name="UUser10">
+        <AttrNames>
+          <Item Value="Nid"/>
+          <Item Value="UserName"/>
+          <Item Value="Password"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreatedOn"/>
+          <Item Value="UpdatedBy"/>
+          <Item Value="UpdatedOn"/>
+          <Item Value="Version"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="UUser1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="Lance1AMDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="Lance1AMDataControl"/>
+  </bindings>
+</pageDefinition>

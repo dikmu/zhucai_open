@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UUserRoleVO"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="JDBC"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  RowClass="com.lance.model.vo.UUserRoleVORowImpl"
+  ComponentClass="com.lance.model.vo.UUserRoleVOImpl"
+  FetchMode="FETCH_AS_NEEDED"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <EntityUsage
+    Name="UUserRoleEO"
+    Entity="com.lance.model.eo.UUserRoleEO"/>
+  <ViewAttribute
+    Name="UUserId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="UUserId"
+    EntityUsage="UUserRoleEO"
+    AliasName="U_USER_ID"/>
+  <ViewAttribute
+    Name="URoleId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="URoleId"
+    EntityUsage="UUserRoleEO"
+    AliasName="U_ROLE_ID"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="UUserRoleEO"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="CreatedOn"
+    PrecisionRule="true"
+    EntityAttrName="CreatedOn"
+    EntityUsage="UUserRoleEO"
+    AliasName="CREATED_ON"/>
+  <ViewAttribute
+    Name="UpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedBy"
+    EntityUsage="UUserRoleEO"
+    AliasName="UPDATED_BY"/>
+  <ViewAttribute
+    Name="UpdatedOn"
+    PrecisionRule="true"
+    EntityAttrName="UpdatedOn"
+    EntityUsage="UUserRoleEO"
+    AliasName="UPDATED_ON"/>
+  <ViewAttribute
+    Name="Version"
+    PrecisionRule="true"
+    EntityAttrName="Version"
+    EntityUsage="UUserRoleEO"
+    AliasName="VERSION"/>
+</ViewObject>

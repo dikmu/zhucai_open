@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProviderSettings xmlns="http://xmlns.oracle.com/ide/hash">
+   <hash n="dataTypeSettings">
+      <value n="databaseType" v="MySQL"/>
+      <value n="databaseVersion" v="50"/>
+   </hash>
+   <value n="id" v="776e2fd5-8d48-4548-b5ff-ecf946ecdd35"/>
+   <value n="name" v="MySQLDB"/>
+   <value n="offlineDBSchema" v="lance"/>
+   <hash n="oracle.jdeveloper.offlinedb.model.ProviderDefaultTemplateSettings">
+      <hash n="default-template-ids">
+         <value n="SCHEMA" v="TEMPLATES"/>
+         <value n="TABLE" v="N:TABLE:TEMPLATE_TABLE1:SCHEMA:TEMPLATES"/>
+         <value n="VIEW" v="N:VIEW:TEMPLATE_VIEW1:SCHEMA:TEMPLATES"/>
+      </hash>
+   </hash>
+</ProviderSettings>

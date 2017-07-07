@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="Test.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelCollection id="pc1">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar">
+                        <af:toolbar id="t2">
+                            <af:button actionListener="#{bindings.CreateInsert.execute}" text="CreateInsert"
+                                       disabled="#{!bindings.CreateInsert.enabled}" id="b1"/>
+                            <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                       disabled="#{!bindings.Commit.enabled}" id="b2"/>
+                            <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback"
+                                       disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b3">
+                                <af:resetActionListener/>
+                            </af:button>
+                        </af:toolbar>
+                    </f:facet>
+                    <f:facet name="statusbar"/>
+                    <af:table value="#{bindings.UUser1.collectionModel}" var="row" rows="#{bindings.UUser1.rangeSize}"
+                              emptyText="#{bindings.UUser1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              rowBandingInterval="0" selectedRowKeys="#{bindings.UUser1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.UUser1.collectionModel.makeCurrent}" rowSelection="single"
+                              fetchSize="#{bindings.UUser1.rangeSize}" id="t1" partialTriggers="::b1">
+                        <af:column headerText="#{bindings.UUser1.hints.Nid.label}" id="c1">
+                            <af:inputText value="#{row.bindings.Nid.inputValue}"
+                                          label="#{bindings.UUser1.hints.Nid.label}"
+                                          required="#{bindings.UUser1.hints.Nid.mandatory}"
+                                          columns="#{bindings.UUser1.hints.Nid.displayWidth}"
+                                          maximumLength="#{bindings.UUser1.hints.Nid.precision}"
+                                          shortDesc="#{bindings.UUser1.hints.Nid.tooltip}" id="it1">
+                                <f:validator binding="#{row.bindings.Nid.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.UUser1.hints.Nid.format}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UUser1.hints.UserName.label}" id="c2">
+                            <af:inputText value="#{row.bindings.UserName.inputValue}"
+                                          label="#{bindings.UUser1.hints.UserName.label}"
+                                          required="#{bindings.UUser1.hints.UserName.mandatory}"
+                                          columns="#{bindings.UUser1.hints.UserName.displayWidth}"
+                                          maximumLength="#{bindings.UUser1.hints.UserName.precision}"
+                                          shortDesc="#{bindings.UUser1.hints.UserName.tooltip}" id="it2">
+                                <f:validator binding="#{row.bindings.UserName.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UUser1.hints.Password.label}" id="c3">
+                            <af:inputText value="#{row.bindings.Password.inputValue}"
+                                          label="#{bindings.UUser1.hints.Password.label}"
+                                          required="#{bindings.UUser1.hints.Password.mandatory}"
+                                          columns="#{bindings.UUser1.hints.Password.displayWidth}"
+                                          maximumLength="#{bindings.UUser1.hints.Password.precision}"
+                                          shortDesc="#{bindings.UUser1.hints.Password.tooltip}" id="it3">
+                                <f:validator binding="#{row.bindings.Password.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UUser1.hints.Email.label}" id="c4">
+                            <af:inputText value="#{row.bindings.Email.inputValue}"
+                                          label="#{bindings.UUser1.hints.Email.label}"
+                                          required="#{bindings.UUser1.hints.Email.mandatory}"
+                                          columns="#{bindings.UUser1.hints.Email.displayWidth}"
+                                          maximumLength="#{bindings.UUser1.hints.Email.precision}"
+                                          shortDesc="#{bindings.UUser1.hints.Email.tooltip}" id="it4">
+                                <f:validator binding="#{row.bindings.Email.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UUser1.hints.PhoneNumber.label}" id="c5">
+                            <af:inputText value="#{row.bindings.PhoneNumber.inputValue}"
+                                          label="#{bindings.UUser1.hints.PhoneNumber.label}"
+                                          required="#{bindings.UUser1.hints.PhoneNumber.mandatory}"
+                                          columns="#{bindings.UUser1.hints.PhoneNumber.displayWidth}"
+                                          maximumLength="#{bindings.UUser1.hints.PhoneNumber.precision}"
+                                          shortDesc="#{bindings.UUser1.hints.PhoneNumber.tooltip}" id="it5">
+                                <f:validator binding="#{row.bindings.PhoneNumber.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UUser1.hints.CreatedBy.label}" id="c6">
+                            <af:inputText value="#{row.bindings.CreatedBy.inputValue}"
+                                          label="#{bindings.UUser1.hints.CreatedBy.label}"
+                                          required="#{bindings.UUser1.hints.CreatedBy.mandatory}"
+                                          columns="#{bindings.UUser1.hints.CreatedBy.displayWidth}"
+                                          maximumLength="#{bindings.UUser1.hints.CreatedBy.precision}"
+                                          shortDesc="#{bindings.UUser1.hints.CreatedBy.tooltip}" id="it6">
+                                <f:validator binding="#{row.bindings.CreatedBy.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.UUser1.hints.CreatedBy.format}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UUser1.hints.CreatedOn.label}" id="c7">
+                            <af:inputDate value="#{row.bindings.CreatedOn.inputValue}"
+                                          label="#{bindings.UUser1.hints.CreatedOn.label}"
+                                          required="#{bindings.UUser1.hints.CreatedOn.mandatory}"
+                                          columns="#{bindings.UUser1.hints.CreatedOn.displayWidth}"
+                                          shortDesc="#{bindings.UUser1.hints.CreatedOn.tooltip}" id="id1">
+                                <f:validator binding="#{row.bindings.CreatedOn.validator}"/>
+                                <af:convertDateTime pattern="#{bindings.UUser1.hints.CreatedOn.format}"/>
+                            </af:inputDate>
+                        </af:column>
+                        <af:column headerText="#{bindings.UUser1.hints.UpdatedBy.label}" id="c8">
+                            <af:inputText value="#{row.bindings.UpdatedBy.inputValue}"
+                                          label="#{bindings.UUser1.hints.UpdatedBy.label}"
+                                          required="#{bindings.UUser1.hints.UpdatedBy.mandatory}"
+                                          columns="#{bindings.UUser1.hints.UpdatedBy.displayWidth}"
+                                          maximumLength="#{bindings.UUser1.hints.UpdatedBy.precision}"
+                                          shortDesc="#{bindings.UUser1.hints.UpdatedBy.tooltip}" id="it7">
+                                <f:validator binding="#{row.bindings.UpdatedBy.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.UUser1.hints.UpdatedBy.format}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column headerText="#{bindings.UUser1.hints.UpdatedOn.label}" id="c9">
+                            <af:inputDate value="#{row.bindings.UpdatedOn.inputValue}"
+                                          label="#{bindings.UUser1.hints.UpdatedOn.label}"
+                                          required="#{bindings.UUser1.hints.UpdatedOn.mandatory}"
+                                          columns="#{bindings.UUser1.hints.UpdatedOn.displayWidth}"
+                                          shortDesc="#{bindings.UUser1.hints.UpdatedOn.tooltip}" id="id2">
+                                <f:validator binding="#{row.bindings.UpdatedOn.validator}"/>
+                                <af:convertDateTime pattern="#{bindings.UUser1.hints.UpdatedOn.format}"/>
+                            </af:inputDate>
+                        </af:column>
+                        <af:column headerText="#{bindings.UUser1.hints.Version.label}" id="c10">
+                            <af:inputText value="#{row.bindings.Version.inputValue}"
+                                          label="#{bindings.UUser1.hints.Version.label}"
+                                          required="#{bindings.UUser1.hints.Version.mandatory}"
+                                          columns="#{bindings.UUser1.hints.Version.displayWidth}"
+                                          maximumLength="#{bindings.UUser1.hints.Version.precision}"
+                                          shortDesc="#{bindings.UUser1.hints.Version.tooltip}" id="it8">
+                                <f:validator binding="#{row.bindings.Version.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.UUser1.hints.Version.format}"/>
+                            </af:inputText>
+                        </af:column>
+                    </af:table>
+                </af:panelCollection>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>
